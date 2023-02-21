@@ -1,0 +1,23 @@
+import React from 'react'
+
+const Stepper = () => {
+  return (
+    <div className=' mx-4 my-6 p-5 flex justify-between items-center '>
+        <div className='relative flex flex-col items-center text-teal-500'>
+        <div className='rounded-full transition duration-200 ease-in-out rounded-md border-2 border-gray-300 h-12 w-20 flex items-center justify-center py-3'>{/* Display number*/ }
+        1 {/* Display number*/ }
+        </div>
+      <div className='absolute top-0 mt-16 w-32  text-center text-xs font-medium uppercase text-white'>
+       description  {/* Display decsription*/ }
+      </div>
+        <div className='flex-auto  absolute   top-5 left-5 bo  text-white transition duration-500 ease-in-out'>
+        {/* Display line*/ }
+        Hello
+        </div>
+        </div>
+
+    </div>
+  )
+}
+
+export default Stepper
