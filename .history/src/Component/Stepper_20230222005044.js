@@ -1,9 +1,6 @@
-import React,{useEffect,useState,useRef} from 'react'
+import React,{useEffect} from 'react'
 
 const Stepper = ({steps,currentStep}) => {
-  useEffect(()=>{
-
-  },[steps,currentStep])
   const displaySteps=(
     <div className='w-full flex items-center'>
     <div className='relative flex flex-col items-center text-teal-500'>
