@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Stepper from "./Component/Stepper";
-import StepperControl from "./Component/StepperControl";
+import Stepper from "./components/Stepper";
+import StepperControl from "./components/StepperControl";
+import { UseContextProvider } from "./contexts/StepperContext";
 
 import Account from "./Component/steps/Account";
-import Details from "./Component/steps/Details";
-import Payment from "./Component/steps/Payment";
+import Details from "./component/steps/Details";
+import Payment from "./component/steps/Payment";
 import Final from "./Component/steps/Final";
 
 function App() {
@@ -45,7 +46,9 @@ function App() {
       <div className="horizontal container mt-5 ">
         <Stepper steps={steps} currentStep={currentStep} />
 
-    
+        <div className="my-10 p-10 ">
+          <UseContextProvider>{displayStep(currentStep)}</UseContextProvider>
+        </div>
       </div>
 
       {/* navigation button */}
@@ -55,7 +58,6 @@ function App() {
           currentStep={currentStep}
           steps={steps}
         />
-        
       )}
     </div>
   );

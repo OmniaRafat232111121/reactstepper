@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Stepper from "./Component/Stepper";
-import StepperControl from "./Component/StepperControl";
+import Stepper from "./components/Stepper";
+import StepperControl from "./component/StepperControl";
 
 import Account from "./Component/steps/Account";
 import Details from "./Component/steps/Details";
@@ -45,7 +45,9 @@ function App() {
       <div className="horizontal container mt-5 ">
         <Stepper steps={steps} currentStep={currentStep} />
 
-    
+        <div className="my-10 p-10 ">
+          <UseContextProvider>{displayStep(currentStep)}</UseContextProvider>
+        </div>
       </div>
 
       {/* navigation button */}

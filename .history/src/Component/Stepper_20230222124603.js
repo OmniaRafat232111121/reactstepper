@@ -78,7 +78,7 @@ const Stepper = ({ steps, currentStep }) => {
             className={`rounded-full transition duration-500 ease-in-out border-2 border-gray-300 h-12 w-12 flex items-center justify-center py-3  ${
               step.selected
                 ?  " bg-green-600 text-white font-bold border  border-green-600  " :
-               ""
+               "
                 
             }`}
           >

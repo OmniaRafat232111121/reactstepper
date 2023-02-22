@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Stepper from "./Component/Stepper";
-import StepperControl from "./Component/StepperControl";
+import Stepper from "./components/Stepper";
+import StepperControl from "./components/StepperControl";
+import { UseContextProvider } from "./contexts/StepperContext";
 
-import Account from "./Component/steps/Account";
-import Details from "./Component/steps/Details";
-import Payment from "./Component/steps/Payment";
-import Final from "./Component/steps/Final";
+import Account from "./components/steps/Account";
+import Details from "./components/steps/Details";
+import Payment from "./components/steps/Payment";
+import Final from "./components/steps/Final";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -20,7 +21,7 @@ function App() {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Account />;
+        return <Ac;
       case 2:
         return <Details />;
       case 3:
@@ -45,7 +46,6 @@ function App() {
       <div className="horizontal container mt-5 ">
         <Stepper steps={steps} currentStep={currentStep} />
 
-    
       </div>
 
       {/* navigation button */}
@@ -55,7 +55,6 @@ function App() {
           currentStep={currentStep}
           steps={steps}
         />
-        
       )}
     </div>
   );
