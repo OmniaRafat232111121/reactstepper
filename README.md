@@ -1,2 +1,2 @@
 #  install react-stepper 
-## npm i react-stepper
+### npm i react-stepper
