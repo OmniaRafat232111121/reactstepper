@@ -47,9 +47,8 @@ function App() {
         <Stepper 
         steps={steps}
         currentStep={currentStep} />
-        <div className="my-10 p-10">
+        <div>
         <UseContextProvider>
-        {displayStep(currentStep)}
         </UseContextProvider>
         </div>
 

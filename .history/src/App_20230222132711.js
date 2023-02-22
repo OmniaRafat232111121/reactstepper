@@ -6,7 +6,6 @@ import Account from "./Component/steps/Account";
 import Details from "./Component/steps/Details";
 import Payment from "./Component/steps/Payment";
 import Final from "./Component/steps/Final";
-import { UseContextProvider } from "./contexts/StepperContext";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -47,10 +46,8 @@ function App() {
         <Stepper 
         steps={steps}
         currentStep={currentStep} />
-        <div className="my-10 p-10">
-        <UseContextProvider>
-        {displayStep(currentStep)}
-        </UseContextProvider>
+        <div>
+        <Us
         </div>
 
     
