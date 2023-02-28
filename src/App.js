@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import Stepper from "./Component/Stepper";
 import StepperControl from "./Component/StepperControl";
 
@@ -8,26 +10,25 @@ import Payment from "./Component/steps/Payment";
 import Final from "./Component/steps/Final";
 import { UseContextProvider } from "./contexts/StepperContext";
 
-function App() {
-  const [currentStep, setCurrentStep] = useState(1);
+import './App.css';
+import { setLanguage } from './store/actions/app'
+import { withTranslation } from './withTranslation';
+import { steps, isRTL } from './App.helper';
 
-  const steps = [
-    "Account Information",
-    "Personal Details",
-    "Payment",
-    "Complete",
-  ];
+function App({ ...props }) {
+  const { localization, language } = props;
+  const [currentStep, setCurrentStep] = useState(1);
 
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Account />;
+        return <Account localization={localization} />;
       case 2:
-        return <Details />;
+        return <Details localization={localization} />;
       case 3:
-        return <Payment />;
+        return <Payment localization={localization} />;
       case 4:
-        return <Final />;
+        return <Final localization={localization} />;
       default:
     }
   };
@@ -41,7 +42,18 @@ function App() {
   };
 
   return (
-    <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
+    <div className={isRTL(language) && 'rtl'}>
+      <div>
+        <div id="language-container">
+          <div className="language-item" onClick={() => props.setLanguage('ar')}>
+            <p>عربي</p>
+          </div>
+          <div className="language-item" onClick={() => props.setLanguage('en')}>
+          <p>English</p>
+        </div>
+        </div>
+      </div>
+      <div className="mx-auto rounded-2xl bg-white pb-2 shadow-xl md:w-1/2">
       {/* Stepper */}
       <div className="horizontal container mt-5 ">
         <Stepper 
@@ -62,11 +74,26 @@ function App() {
           handleClick={handleClick}
           currentStep={currentStep}
           steps={steps}
+          localization={localization}
         />
         
       )}
     </div>
+    </div>
+    
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  language: state.app.language,
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+        setLanguage,
+    },
+    dispatch,
+  );
+
+  export default withTranslation(connect(mapStateToProps, mapDispatchToProps)(App));
