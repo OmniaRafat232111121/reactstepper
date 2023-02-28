@@ -9,5 +9,7 @@
   "payment": "الدفع",
   "complete": "اتمام",
   "username": "اسم المستخدم",
-  "password": "كلمة المرور"
+  "password": "كلمة المرور",
+  "address": "العنوان",
+  "city": "المدينة"
 }
