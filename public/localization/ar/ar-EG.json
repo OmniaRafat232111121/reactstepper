@@ -7,5 +7,7 @@
   "accountInformation": "بيانات الحساب",
   "personalDetails": "بيانات شخصية",
   "payment": "الدفع",
-  "complete": "اتمام"
+  "complete": "اتمام",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور"
 }

@@ -7,5 +7,7 @@
   "accountInformation": "ACCOUNT INFORMATION",
   "personalDetails": "PERSONAL DETAILS",
   "payment": "PAYMENT",
-  "complete": "COMPLETE"
+  "complete": "COMPLETE",
+  "username": "Username",
+  "password": "Password"
 }
