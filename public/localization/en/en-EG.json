@@ -11,5 +11,8 @@
   "username": "Username",
   "password": "Password",
   "address": "Address",
-  "city": "City"
+  "city": "City",
+  "creditCard": "Credit Card",
+  "dateFormat": "YY/MM/DD",
+  "exp": "EXP"
 }
