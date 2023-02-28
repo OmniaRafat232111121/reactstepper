@@ -13,11 +13,13 @@ import { UseContextProvider } from "./contexts/StepperContext";
 import './App.css';
 import { setLanguage } from './store/actions/app'
 import { withTranslation } from './withTranslation';
-import { steps, isRTL } from './App.helper';
+import { isRTL, getLocalizedSteps } from './App.helper';
 
 function App({ ...props }) {
   const { localization, language } = props;
   const [currentStep, setCurrentStep] = useState(1);
+
+  const steps = getLocalizedSteps(localization);
 
   const displayStep = (step) => {
     switch (step) {
@@ -46,10 +48,10 @@ function App({ ...props }) {
       <div>
         <div id="language-container">
           <div className="language-item" onClick={() => props.setLanguage('ar')}>
-            <p>عربي</p>
+            <p>{localization.arabic}</p>
           </div>
           <div className="language-item" onClick={() => props.setLanguage('en')}>
-          <p>English</p>
+          <p>{localization.english}</p>
         </div>
         </div>
       </div>
@@ -57,8 +59,10 @@ function App({ ...props }) {
       {/* Stepper */}
       <div className="horizontal container mt-5 ">
         <Stepper 
-        steps={steps}
-        currentStep={currentStep} />
+          steps={steps}
+          currentStep={currentStep}
+          localization={localization}
+        />
         <div className="my-10 p-10">
         <UseContextProvider>
         {displayStep(currentStep)}

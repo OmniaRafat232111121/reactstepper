@@ -1,5 +1,11 @@
 {
   "next": "Next",
   "back": "Back",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "arabic": "Arabic",
+  "english": "English",
+  "accountInformation": "ACCOUNT INFORMATION",
+  "personalDetails": "PERSONAL DETAILS",
+  "payment": "PAYMENT",
+  "complete": "COMPLETE"
 }

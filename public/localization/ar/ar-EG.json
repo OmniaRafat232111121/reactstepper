@@ -1,5 +1,11 @@
 {
   "next": "التالي",
   "back": "السابق",
-  "confirm": "تأكيد"
+  "confirm": "تأكيد",
+  "arabic": "عربي",
+  "english": "انجليزي",
+  "accountInformation": "بيانات الحساب",
+  "personalDetails": "بيانات شخصية",
+  "payment": "الدفع",
+  "complete": "اتمام"
 }
