@@ -14,5 +14,8 @@
   "city": "City",
   "creditCard": "Credit Card",
   "dateFormat": "YY/MM/DD",
-  "exp": "EXP"
+  "exp": "EXP",
+  "congrats": "Congratulations!",
+  "accountCreated": "Your Account has been created.",
+  "close": "Close"
 }
