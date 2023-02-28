@@ -1,0 +1,21 @@
+{
+  "next": "التالي",
+  "back": "السابق",
+  "confirm": "تأكيد",
+  "arabic": "عربي",
+  "english": "انجليزي",
+  "accountInformation": "بيانات الحساب",
+  "personalDetails": "بيانات شخصية",
+  "payment": "الدفع",
+  "complete": "اتمام",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور",
+  "address": "العنوان",
+  "city": "المدينة",
+  "creditCard": "بطاقة ائتمان",
+  "dateFormat": "سنة/شهر/يوم",
+  "exp": "انتهاء صلاحية",
+  "congrats": "مبروك !",
+  "accountCreated": "تم انشاء حسابك.",
+  "close": "اغلاق"
+}

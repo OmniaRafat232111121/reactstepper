@@ -1,0 +1,21 @@
+{
+  "next": "Next",
+  "back": "Back",
+  "confirm": "Confirm",
+  "arabic": "Arabic",
+  "english": "English",
+  "accountInformation": "ACCOUNT INFORMATION",
+  "personalDetails": "PERSONAL DETAILS",
+  "payment": "PAYMENT",
+  "complete": "COMPLETE",
+  "username": "Username",
+  "password": "Password",
+  "address": "Address",
+  "city": "City",
+  "creditCard": "Credit Card",
+  "dateFormat": "YY/MM/DD",
+  "exp": "EXP",
+  "congrats": "Congratulations!",
+  "accountCreated": "Your Account has been created.",
+  "close": "Close"
+}
